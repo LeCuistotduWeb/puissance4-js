@@ -1,0 +1,268 @@
+
+:root {
+ --primary: #233140;
+ --secondary: #26A69A;
+ --light: #EEEEEE;
+ --accent: #F30154;
+}
+
+
+*,*:after,*:before {box-sizing: border-box;}
+
+body {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    background: #fff;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #03012D;
+}
+
+h1 {
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: 60px;
+    text-shadow: 0px 5px var(--color1);
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    z-index: 1;
+    margin-left: 60px;
+}
+
+h1:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: -80px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    z-index: -1;
+}
+
+h1::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: -60px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--secondary);
+    z-index: -1;
+}
+
+.btn {
+    background-color: var(--primary);
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: var(--secondary);
+    transition: all .3s;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-restart {
+    margin-top: 15px;
+    padding: 15px 25px;
+}
+
+.btn-reset {
+    border-radius: 5px;
+    margin-left: auto;
+    background: transparent;
+    border: none;
+    color: var(--accent);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s;
+}
+
+.container {
+    margin: 0 auto;
+    background-color: var(--light);
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 650px;
+}
+
+.infos-game {
+    width: 100%;
+    max-width: 650px;
+    margin-bottom: 15px;
+}
+
+.ia-container {
+    margin-bottom: 15px;
+    width: 100%;
+    width: 100%;
+    max-width: 650px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.ia-container input {
+    margin: 0;
+}
+
+.joueur-points {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 700;
+}
+
+.joueur-points .points {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 5px;
+    margin-left: 5px;
+    height: 30px;
+}
+
+.joueur-points .j2 {
+    font-weight: 700;
+    margin-left: 30px;
+    padding-left: 30px;
+    border-left: 2px solid var(--primary);
+}
+
+.nbGame {
+    margin-left: 30px;
+}
+
+.jeu {
+    margin: 0 auto;
+}
+
+.joueur-play {
+    font-size: 1rem;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+
+.tour {
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+}
+
+#winner {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+table tr td {
+    border: solid 1px var(--primary);
+    width: 70px;
+    height: 70px;
+    position: relative;
+    border: none;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.pionJ1,
+.pionJ2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    display: inline-block;
+    content: '';
+    width: 100%;
+    border-radius: 50%;
+}
+
+.pionJ1 {
+    background-color: var(--primary);
+}
+
+.pionJ2 {
+    background-color: var(--secondary);
+}
+
+table tr.row-buttons td {
+    position: relative;
+    height: 100%;
+}
+
+table tr td button {
+    width: 100%;
+    height: 100%;
+    height: 30px;
+}
+
+
+/* checkbox custom */
+input[type=checkbox] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    border-radius: 4px;
+    height: 25px;
+    width: 25px;
+    background: #fff;
+    border: 3px solid var(--primary);
+    outline: none;
+}
+
+input[type="checkbox"]:checked {
+    background: var(--primary);
+    margin: 0px;
+    position: relative;
+}
+
+input[type="checkbox"]:checked:before {
+    font-family: FontAwesome;
+    content: '';
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 5px;
+    height: 10px;
+    position: absolute;
+    top: 22%;
+    left: 40%;
+}
+/* end checkbox custom */
+

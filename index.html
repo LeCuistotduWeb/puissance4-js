@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/app.css">
+    <script src="./js/utils.js" defer></script>
+    <script src="./js/IA.js" defer></script>
+    <script src="./js/jeu.js" defer></script>
+    <script src="./js/app.js" defer></script>
+</head>
+<body>
+    <h1>Puissance 4</h1>
+
+
+    <div class="ia-container">
+        <label for="ia" class="ia-checkbox">
+            <input type="checkbox" name="ia" id="ia" onchange="startIa()">
+            Jouer contre l'ordinateur
+        </label>
+    </div>
+    
+    <div class="infos-game">
+
+        <div id="joueurPointsInfos" class="joueur-points">
+            <div class="j1">Joueur 1 : <span id="j1Points" class="points"></span></div> 
+            <div class="j2">Joueur 2 : <span id="j2Points" class="points"></span></div>  
+            <div class="nbGame">Nombre de partie : <span id="nbGameVal" class="nb-game-value"></span></div>
+        </div>
+        <hr>
+        
+        <div id="winner"  class="winner"></div>
+    </div>
+
+    <div id="gameContainer" class="container">
+        <div id="tour" class="tour"></div>
+        <div id="jeu" class="jeu"></div>
+    </div>
+</body>
+</html>
